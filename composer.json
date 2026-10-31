@@ -1,0 +1,1 @@
+{"name":"xiaomlove/nexusphp-category-upload-multiplier","description":"Category based upload multiplier plugin for NexusPHP.","type":"library","autoload":{"psr-4":{"NexusPlugin\\CategoryUploadMultiplier\\":"src/"}},"extra":{"laravel":{"providers":["NexusPlugin\\CategoryUploadMultiplier\\ServiceProvider"]}},"require":{"php":">=8.2 <8.6"}}

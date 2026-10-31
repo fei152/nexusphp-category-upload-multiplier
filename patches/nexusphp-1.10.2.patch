@@ -1,0 +1,20 @@
+--- a/include/globalfunctions.php
++++ b/include/globalfunctions.php
+@@ -1056,6 +1056,7 @@
+             $upRatio = \\App\\Models\\Torrent::$promotionTypes[$spStateReal]['up_multiplier'];
+             $log .= ", [IS_NOT_UPLOADER] || uploaderRatio == 1, upRatio: $upRatio";
+         }
++        $upRatio = max(0, (float)apply_filter('torrent_upload_multiplier', (float)$upRatio, $torrent, $user));
+         /**
+          * VIP do not calculate downloaded
+          * @since 1.7.13
+--- a/include/functions.php
++++ b/include/functions.php
+@@ -3775,6 +3775,7 @@
+     }
+ \tprint("</td>");
+ 
++    echo apply_filter('torrent_list_before_rating', '', $row);
+     if ($enableImdb || $enablePtGen) {
+         echo $torrent->renderTorrentsPageAverageRating($row, $ptGenInfo[$row['id']] ?? []);
+     }

@@ -1,0 +1,2 @@
+<?php
+return ['settings'=>['tab'=>'Category upload multiplier','rules'=>'Category rules','rules_help'=>'The first matching category rule is used. Each rule has its own calculation mode.','category_id'=>'Category ID','multiplier'=>'Upload multiplier','mode'=>'Calculation mode','mode_multiply'=>'Existing ratio × category multiplier','mode_replace'=>'Base 1 × category multiplier','mode_help'=>'For an existing ratio of 2 and a category multiplier of 3, these modes produce 6 and 3 respectively.']];
